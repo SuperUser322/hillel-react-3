@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App1 from './App1.js';
-//import App2 from './App2.js'; 
+//import App2 from './App2.js';
 //import App3 from './App3.js';
 import reportWebVitals from './reportWebVitals';
 

@@ -1,18 +1,24 @@
 import React, { Component } from "react";
 
 import Cat from './Task1/Cat';
-import Mouse from './Task1/Mouse';
 
 class App1 extends Component {
+  state = {
+      x: Math.floor(Math.random() * 1000),
+      y: Math.floor(Math.random() * 1000),
+  }
 
-  renderTheCat(mouse) {
-    return <Cat mouse={mouse} />;
+  handleMouseMove = (e) => {
+    this.setState({
+      x: e.clientX-40,
+      y: e.clientY-40,
+    });
   }
 
   render() {
     return (
-      <div className="firstTask">
-        <Mouse render={this.renderTheCat} />
+      <div className="firstTask" >
+          <Cat mouse={this.state} handleMouseMove={this.handleMouseMove} />
       </div>
     );
   }
